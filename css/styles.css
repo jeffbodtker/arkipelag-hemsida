@@ -231,8 +231,29 @@ p { color: var(--color-muted); }
 }
 .btn--warm:hover { background: var(--color-warm-dark); }
 
+.btn--accent-outline {
+  background: rgba(95,209,230,0.12);
+  border-color: rgba(95,209,230,0.55);
+  color: #fff;
+}
+.btn--accent-outline:hover { background: rgba(95,209,230,0.22); border-color: var(--color-accent-light); }
+
 .btn--sm { padding: 0.6rem 1.1rem; font-size: var(--fs-xs); }
 .btn--block { width: 100%; }
+
+.card-badge {
+  position: absolute;
+  top: -12px;
+  left: var(--space-5);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+}
 
 /* ---- Cards --------------------------------------------------------------- */
 .card {

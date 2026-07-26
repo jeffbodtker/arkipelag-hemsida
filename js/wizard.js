@@ -199,5 +199,20 @@ document.addEventListener('DOMContentLoaded', () => {
     wizardSuccess.classList.add('is-active');
   });
 
+  // Deep-link pre-fill, e.g. kontakt.html?behov=serviceavtal#offert
+  const behovParam = new URLSearchParams(window.location.search).get('behov');
+  if (behovParam) {
+    const behovInput = Array.from(form.querySelectorAll('input[name="behov"]')).find((el) => el.value === behovParam);
+    const group = behovInput?.closest('[data-group-for]');
+    const type = group?.getAttribute('data-group-for');
+    const typeRadio = type && form.querySelector(`input[name="customerType"][value="${type}"]`);
+    if (behovInput && typeRadio) {
+      typeRadio.checked = true;
+      applyGroupVisibility();
+      behovInput.checked = true;
+      currentStep = 2;
+    }
+  }
+
   showStep(currentStep);
 });
