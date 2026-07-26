@@ -936,4 +936,178 @@ svg.wave-divider.wave-divider--alt path { fill: var(--color-surface-alt); }
 .vp-lista li { display: flex; align-items: flex-start; gap: var(--space-2); font-size: var(--fs-sm); color: var(--color-muted); }
 .vp-lista li svg { width: 17px; height: 17px; color: var(--color-accent-dark); flex-shrink: 0; margin-top: 2px; }
 
+/* ---- Heading accent (italic colored phrase, inspired by NOEN headings) ------ */
+.heading-accent em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+}
+.section--dark .heading-accent em, .hero .heading-accent em { color: var(--color-accent-light); }
+
+/* ---- Ticker marquee ----------------------------------------------------------- */
+.ticker {
+  overflow: hidden;
+  background: var(--color-accent);
+  padding-block: var(--space-4);
+}
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: tickerScroll 26s linear infinite;
+}
+.ticker__set {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+  padding-right: var(--space-7);
+  flex-shrink: 0;
+}
+.ticker__set span {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-on-accent);
+  white-space: nowrap;
+}
+.ticker__dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(5,42,51,0.4); flex-shrink: 0; }
+@keyframes tickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker__track { animation: none; } }
+
+/* ---- Showcase cards (service categories, gradient — we don't have job photos yet) */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+.showcase-card--wide { grid-column: 1 / -1; }
+@media (max-width: 760px) { .showcase-grid { grid-template-columns: 1fr; } .showcase-card--wide { grid-column: auto; } }
+
+.showcase-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 28px;
+  min-height: 320px;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  background: linear-gradient(155deg, var(--c1, var(--color-primary)), var(--c2, var(--color-primary-dark)));
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease;
+}
+.showcase-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.showcase-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle at 85% 15%, rgba(255,255,255,0.16), transparent 45%);
+}
+.showcase-card__icon {
+  position: absolute;
+  right: -18px; bottom: -18px;
+  width: 160px; height: 160px;
+  color: rgba(255,255,255,0.10);
+  z-index: 0;
+}
+.showcase-card__icon svg { width: 100%; height: 100%; }
+.showcase-card__arrow {
+  position: absolute;
+  top: 20px; right: 20px;
+  z-index: 2;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.showcase-card:hover .showcase-card__arrow { background: rgba(255,255,255,0.26); transform: rotate(45deg); }
+.showcase-card__arrow svg { width: 18px; height: 18px; }
+.showcase-card__content { position: relative; z-index: 1; }
+.showcase-card__eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: var(--space-2);
+}
+.showcase-card h3 { color: #fff; font-size: var(--fs-xl); margin-bottom: var(--space-2); }
+.showcase-card p { color: rgba(255,255,255,0.78); font-size: var(--fs-sm); }
+
+/* ---- Scroll timeline (process steps, dark section) ---------------------------- */
+.timeline-wrap { position: relative; max-width: 880px; margin-inline: auto; padding-block: var(--space-6) var(--space-4); }
+.timeline-wrap::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.12);
+  transform: translateX(-50%);
+}
+.timeline__item {
+  position: relative;
+  width: 50%;
+  padding: var(--space-5) var(--space-7) var(--space-5) 0;
+}
+.timeline__item:nth-child(even) { left: 50%; padding: var(--space-5) 0 var(--space-5) var(--space-7); }
+.timeline__card {
+  display: inline-block;
+  text-align: left;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: var(--space-5);
+  max-width: 340px;
+  opacity: 0.45;
+  transform: translateY(16px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out), border-color 0.5s ease, box-shadow 0.5s ease;
+}
+.timeline__item:nth-child(odd) { text-align: right; }
+.timeline__item:nth-child(odd) .timeline__card { text-align: right; }
+.timeline__dot {
+  position: absolute;
+  top: var(--space-6);
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--color-primary-dark);
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.timeline__item:nth-child(odd) .timeline__dot { right: -7px; }
+.timeline__item:nth-child(even) .timeline__dot { left: -7px; }
+.timeline__num { font-family: var(--font-heading); font-size: var(--fs-xl); font-weight: 700; color: var(--color-accent-light); }
+.timeline__card h3 { color: #fff; margin-block: var(--space-2); }
+.timeline__card p { color: rgba(255,255,255,0.65); font-size: var(--fs-sm); }
+
+.timeline__item.is-active .timeline__card {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: var(--color-accent);
+  box-shadow: 0 20px 50px rgba(23,174,206,0.18);
+}
+.timeline__item.is-active .timeline__dot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 6px rgba(23,174,206,0.22);
+}
+
+@media (max-width: 700px) {
+  .timeline-wrap::before { left: 22px; }
+  .timeline__item, .timeline__item:nth-child(even) {
+    width: 100%;
+    text-align: left !important;
+    padding: var(--space-4) 0 var(--space-4) var(--space-8);
+    left: 0;
+  }
+  .timeline__item .timeline__card, .timeline__item:nth-child(odd) .timeline__card { text-align: left !important; }
+  .timeline__item .timeline__dot, .timeline__item:nth-child(odd) .timeline__dot, .timeline__item:nth-child(even) .timeline__dot { left: 15px; right: auto; }
+}
+
 .vp-btn { width: 100%; }

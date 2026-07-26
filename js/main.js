@@ -47,4 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ---- Scroll timeline (process steps) -----------------------------------
+  const timelineItems = document.querySelectorAll('.timeline__item');
+  if (timelineItems.length) {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-active');
+        });
+      }, { threshold: 0.4, rootMargin: '0px 0px -10% 0px' });
+      timelineItems.forEach((item) => observer.observe(item));
+    } else {
+      timelineItems.forEach((item) => item.classList.add('is-active'));
+    }
+  }
 });
