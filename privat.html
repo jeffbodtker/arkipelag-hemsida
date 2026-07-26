@@ -48,35 +48,69 @@
       <span class="brand__text">Arkipelag Kyl & Energi<small>Kyla · Värme · Energi</small></span>
     </a>
     <nav class="nav" aria-label="Huvudmeny">
-      <ul class="nav__links">
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="foretag.html">Företag</a></li>
-        <li><a href="privat.html" aria-current="page">Privat</a></li>
-        <li><a href="om-oss.html">Om oss</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
       <div class="nav__cta">
         <a class="nav__phone nav__phone-label" href="tel:+46708198818">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.164-1.462l-3.6-.9a1.5 1.5 0 0 0-1.53.44l-.83.98a13.5 13.5 0 0 1-6.06-6.06l.98-.83a1.5 1.5 0 0 0 .44-1.53l-.9-3.6A1.5 1.5 0 0 0 6.372 3H5.25A2.25 2.25 0 0 0 2.25 5.25v1.5Z"/></svg>
           0708-19 88 18
         </a>
         <a class="btn btn--primary btn--sm" href="kontakt.html">Begär offert</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menuDrawer" id="navToggle">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
           <span class="visually-hidden">Öppna meny</span>
         </button>
       </div>
     </nav>
   </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html">Hem</a>
-    <a href="foretag.html">Företag</a>
-    <a href="privat.html">Privat</a>
-    <a href="om-oss.html">Om oss</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="tel:+46708198818">Ring 0708-19 88 18</a>
-  </div>
 </header>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="menu-drawer" id="menuDrawer" aria-hidden="true">
+  <div class="menu-drawer__top">
+    <a class="brand" href="index.html">
+      <img class="brand__mark" src="assets/img/logo-icon.png" alt="Arkipelag Kyl & Energi logotyp">
+      <span class="brand__text">Arkipelag Kyl & Energi<small>Kyla · Värme · Energi</small></span>
+    </a>
+    <button class="menu-drawer__close" id="menuClose" type="button" aria-label="Stäng meny">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="menu-drawer__nav" aria-label="Huvudmeny">
+    <div class="menu-accordion">
+      <button class="menu-accordion__trigger" type="button" aria-expanded="false">
+        Företag
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+      </button>
+      <div class="menu-accordion__panel">
+        <div class="menu-accordion__panel-inner">
+          <a href="foretag.html#varukyla">Varukyla</a>
+          <a href="foretag.html#restaurangkyla">Restaurangkyla</a>
+          <a href="foretag.html#industrikyla">Industrikyla</a>
+          <a href="foretag.html#kyl-frysrum">Kyl- och frysrum</a>
+          <a class="menu-accordion__all" href="foretag.html">Visa alla tjänster för företag →</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu-accordion">
+      <button class="menu-accordion__trigger" type="button" aria-expanded="false">
+        Privat
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+      </button>
+      <div class="menu-accordion__panel">
+        <div class="menu-accordion__panel-inner">
+          <a href="privat.html#luftvarmepump">Luftvärmepump</a>
+          <a href="privat.html#ac">AC</a>
+          <a href="privat.html#service">Service & underhåll</a>
+          <a class="menu-accordion__all" href="privat.html">Visa alla tjänster för privat →</a>
+        </div>
+      </div>
+    </div>
+    <a class="menu-drawer__link" href="om-oss.html">Om oss</a>
+    <a class="menu-drawer__link" href="kontakt.html">Kontakt</a>
+  </nav>
+  <div class="menu-drawer__bottom">
+    <a class="btn btn--primary btn--block" href="kontakt.html">Begär offert</a>
+    <p class="menu-drawer__trust">Svarar oftast inom en arbetsdag · Certifierade kyltekniker</p>
+  </div>
+</aside>
 
 <main id="main">
 
@@ -96,59 +130,95 @@
     <svg class="wave-divider" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c100-32 200-32 300 0s200 32 300 0 200-32 300 0 200 32 300 0V80H0Z"/></svg>
   </section>
 
-  <section class="section">
-    <div class="container" style="max-width: 900px;">
+  <section class="section" id="vp-jamforelse">
+    <div class="container" style="max-width: 1040px;">
       <div class="section-head">
         <span class="eyebrow">Hjälp mig välja</span>
-        <h2>Hur värmer du huset idag?</h2>
-        <p>Svara på en fråga så visar vi vilken typ av värmepump som brukar passa bäst.</p>
+        <h2>Sänk värmekostnaden — med rätt pump för ditt hus</h2>
+        <p>Luft/luft eller luft/vatten? Det beror helt på hur ditt hus värms idag. Svara på en fråga så visar vi vad som passar dig.</p>
       </div>
 
-      <div class="heat-quiz">
-        <div class="choice-grid" role="radiogroup" aria-label="Hur värmer du huset idag?">
-          <label class="choice-card">
-            <input type="radio" name="heat" id="heat-direct" checked>
-            <strong>Direktverkande el / elelement</strong>
-            <span>Elpanel eller elradiatorer, ingen vattenburen värme.</span>
-          </label>
-          <label class="choice-card">
-            <input type="radio" name="heat" id="heat-water">
-            <strong>Vattenburen värme</strong>
-            <span>Radiatorer eller golvvärme kopplat till en panna.</span>
-          </label>
-        </div>
+      <p class="vp-fraga"><span class="puls"></span> Hur värmer du huset idag?</p>
+      <div class="vp-val" id="vpVal" role="radiogroup" aria-label="Hur värmer du huset idag?">
+        <button class="vp-chip is-active" type="button" data-choice="el">Direktverkande el / elelement</button>
+        <button class="vp-chip" type="button" data-choice="vatten">Vattenburen värme (radiator/golvvärme)</button>
+        <button class="vp-chip" type="button" data-choice="osaker">Vet inte — hjälp mig välja</button>
+      </div>
 
-        <div class="quiz-result result-direct">
-          <div class="result-card">
-            <div class="stat-num">Luft/luft</div>
-            <div>
-              <h3>Rekommenderas för dig</h3>
-              <p>En inomhusdel sprider värmen i huset och fungerar som AC på sommaren. Vanligtvis installerad på en dag.</p>
-              <ul>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Lägre elvärmekostnad jämfört med direktverkande el</li>
+      <div class="vp-kort-rad" id="vpKortRad">
+
+        <article class="vp-kort" data-card="ll">
+          <span class="vp-badge"><b>Rekommenderas</b> för dig</span>
+          <div class="vp-3d">
+            <div class="vp-visual">
+              <svg viewBox="0 0 300 200" aria-hidden="true">
+                <text x="34" y="65" font-family="'Space Grotesk', sans-serif" font-size="26" font-weight="700" fill="rgba(255,255,255,0.5)">−5°</text>
+                <text x="212" y="65" font-family="'Space Grotesk', sans-serif" font-size="26" font-weight="700" fill="#fff">+21°</text>
+                <line class="vp-flode" x1="64" y1="100" x2="232" y2="100" stroke="#5FD1E6" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 8"/>
+                <path d="M218 92l15 8-15 8" stroke="#5FD1E6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <rect x="28" y="122" width="52" height="30" rx="5" fill="rgba(255,255,255,0.14)"/>
+                <rect x="204" y="120" width="64" height="18" rx="4" fill="#17AECE"/>
+                <rect x="212" y="140" width="48" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+              </svg>
+              <div class="vp-glans"></div>
+            </div>
+            <div class="vp-inner">
+              <span class="vp-typchip">Luft/luft</span>
+              <h3>Värmer luften. Kyler på sommaren.</h3>
+              <p class="vp-desc">En inomhusdel som sprider värmen i huset — och fungerar som AC när det är varmt. Installerad på en dag.</p>
+              <div class="vp-stat">
+                <span class="tal">−50 %</span>
+                <span class="txt">lägre elvärmekostnad — typiskt hus med direktverkande el</span>
+              </div>
+              <ul class="vp-lista">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Perfekt för dig med direktverkande el eller elelement</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Kyla ingår — samma maskin svalkar i juli</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Fungerar även som tillskottsvärme i fritidshus</li>
               </ul>
+              <a class="vp-btn btn btn--primary" href="kontakt.html">Få pris på luft/luft</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="quiz-result result-water">
-          <div class="result-card">
-            <div class="stat-num">Luft/vatten</div>
-            <div>
-              <h3>Rekommenderas för dig</h3>
-              <p>Ersätter din el- eller oljepanna och driver hela husets vattenburna värme — inklusive varmvattnet.</p>
-              <ul>
+        <article class="vp-kort" data-card="lv">
+          <span class="vp-badge"><b>Rekommenderas</b> för dig</span>
+          <div class="vp-3d">
+            <div class="vp-visual">
+              <svg viewBox="0 0 300 200" aria-hidden="true">
+                <text x="96" y="72" font-family="'Space Grotesk', sans-serif" font-size="38" font-weight="700" fill="#fff">55°</text>
+                <text x="98" y="92" font-family="Inter, sans-serif" font-size="11" letter-spacing="1" fill="rgba(255,255,255,0.5)">RADIATORTEMP</text>
+                <rect x="66" y="118" width="110" height="10" rx="4" fill="rgba(255,255,255,0.22)"/>
+                <g stroke="#5FD1E6" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="78" y1="128" x2="78" y2="164"/>
+                  <line x1="100" y1="128" x2="100" y2="164"/>
+                  <line x1="122" y1="128" x2="122" y2="164"/>
+                  <line x1="144" y1="128" x2="144" y2="164"/>
+                  <line x1="166" y1="128" x2="166" y2="164"/>
+                </g>
+                <path class="vp-flode" d="M66 172c34 10 78 10 112 0" stroke="#5FD1E6" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 7" fill="none"/>
+              </svg>
+              <div class="vp-glans"></div>
+            </div>
+            <div class="vp-inner">
+              <span class="vp-typchip">Luft/vatten</span>
+              <h3>Värmer element, golv och varmvatten.</h3>
+              <p class="vp-desc">Ersätter din el- eller oljepanna och driver hela husets vattenburna värme — inklusive duschen.</p>
+              <div class="vp-stat">
+                <span class="tal">−70 %</span>
+                <span class="txt">lägre uppvärmningskostnad jämfört med el- eller oljepanna</span>
+              </div>
+              <ul class="vp-lista">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Störst besparing av alla värmeåtgärder för villor</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Varmvatten ingår — hela husets värmesystem i ett</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Passar dig med radiatorer eller golvvärme</li>
               </ul>
+              <a class="vp-btn btn btn--primary" href="kontakt.html">Få pris på luft/vatten</a>
             </div>
           </div>
-        </div>
+        </article>
+
       </div>
-      <p style="text-align:center; margin-top: var(--space-6); font-size: var(--fs-sm);">Osäker? <a href="kontakt.html" style="color:var(--color-accent-dark); font-weight:600;">Boka ett kostnadsfritt hembesök</a> så hjälper vi dig välja.</p>
+      <p style="text-align:center; margin-top: var(--space-6); font-size: var(--fs-sm);">Fortfarande osäker? <a href="kontakt.html" style="color:var(--color-accent-dark); font-weight:600;">Boka ett kostnadsfritt hembesök</a> så hjälper vi dig välja på plats.</p>
     </div>
   </section>
 
@@ -159,17 +229,17 @@
         <h2>Det vi arbetar med</h2>
       </div>
       <div class="grid grid--3">
-        <div class="card">
+        <div class="card" id="luftvarmepump">
           <div class="card--icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></div>
           <h3>Luftvärmepump</h3>
           <p>Installation av luft/luft- och luft/vatten-värmepump för villa och fritidshus.</p>
         </div>
-        <div class="card">
+        <div class="card" id="ac">
           <div class="card--icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M4 12a8 8 0 1 1 16 0M4 12a8 8 0 0 0 16 0"/></svg></div>
           <h3>AC</h3>
           <p>Skön svalka på sommaren med luftkonditionering anpassad för hemmet.</p>
         </div>
-        <div class="card">
+        <div class="card" id="service">
           <div class="card--icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
           <h3>Service & underhåll</h3>
           <p>Löpande service så att din värmepump håller effektiviteten år efter år.</p>
@@ -269,5 +339,6 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/varmepump.js"></script>
 </body>
 </html>
