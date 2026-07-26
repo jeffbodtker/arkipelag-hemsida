@@ -1,0 +1,32 @@
+# Arkipelag Kyl & Energi AB
+
+> Lokalt kyl- och energiföretag med bas i Karlskrona, Blekinge. Vi hjälper företag och privatpersoner i stora delar av Blekinge med kyla, värmepumpar och energioptimering.
+
+## Företag
+- Namn: Arkipelag Kyl & Energi AB (AKE)
+- Ort: Karlskrona, Blekinge, Sverige
+- Arbetsområde: Karlskrona och stora delar av Blekinge
+- Telefon: 0708-19 88 18
+- E-post: Info@AkeKyl.se
+- Grundare: Jeff Bödtker, certifierad kyltekniker
+
+## Tjänster för företag och fastighetsägare
+- Varukyla, restaurangkyla, industrikyla (inklusive processkylning/vätskekylare)
+- Kyl- och frysrum
+- Komfortkyla
+- Energioptimering av kylanläggningar
+- Serviceavtal med prioriterad akuthjälp
+- Se: /foretag.html
+
+## Tjänster för privatpersoner
+- Luftvärmepump (luft/luft och luft/vatten)
+- AC för villa och fritidshus
+- Service och underhåll av värmepumpar
+- Se: /privat.html
+
+## Sidor
+- Startsida: /index.html
+- Företag: /foretag.html
+- Privat: /privat.html
+- Om oss: /om-oss.html
+- Kontakt & offertförfrågan: /kontakt.html

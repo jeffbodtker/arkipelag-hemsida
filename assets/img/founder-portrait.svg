@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="founderIllTitle">
+  <title id="founderIllTitle">Illustrerad porträttmarkör för grundaren Jeff Bödtker, kyltekniker</title>
+  <defs>
+    <linearGradient id="founderBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#145E88"/>
+      <stop offset="100%" stop-color="#072B41"/>
+    </linearGradient>
+    <clipPath id="founderClip">
+      <circle cx="200" cy="200" r="200"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="200" cy="200" r="200" fill="url(#founderBg)"/>
+
+  <g clip-path="url(#founderClip)">
+    <!-- waterline -->
+    <path d="M-20 300c60-14 120-14 180 0s120 14 180 0 120-14 180 0 60 14 60 14V430H-20Z" fill="#17AECE" opacity="0.5"/>
+    <path d="M-20 320c60-10 120-10 180 0s120 10 180 0 120-10 180 0 60 10 60 10V430H-20Z" fill="#0E8DA8" opacity="0.4"/>
+
+    <!-- shoulders / torso (workwear) -->
+    <path d="M90 400c8-58 46-96 110-96s102 38 110 96Z" fill="#0E1E2B"/>
+    <path d="M140 320c18 10 42 16 60 16s42-6 60-16l-10 30c-16 8-34 12-50 12s-34-4-50-12Z" fill="#5FD1E6" opacity="0.9"/>
+
+    <!-- head -->
+    <circle cx="200" cy="196" r="62" fill="#F3D9BE"/>
+    <path d="M140 176c4-34 30-56 60-56s56 22 60 56c-10-8-34-14-60-14s-50 6-60 14Z" fill="#3A2A20"/>
+
+    <!-- safety glasses -->
+    <rect x="156" y="196" width="34" height="16" rx="8" fill="none" stroke="#0B3D5C" stroke-width="4"/>
+    <rect x="210" y="196" width="34" height="16" rx="8" fill="none" stroke="#0B3D5C" stroke-width="4"/>
+    <line x1="190" y1="204" x2="210" y2="204" stroke="#0B3D5C" stroke-width="4"/>
+  </g>
+
+  <circle cx="200" cy="200" r="196" fill="none" stroke="#5FD1E6" stroke-width="4" opacity="0.5"/>
+
+  <!-- star accent -->
+  <path d="M330 70l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#fff" opacity="0.9"/>
+</svg>

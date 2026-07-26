@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt & offertförfrågan | Arkipelag Kyl & Energi, Karlskrona</title>
+<meta name="description" content="Kontakta Arkipelag Kyl & Energi i Karlskrona. Ring, mejla eller fyll i offertformuläret — vi återkommer snabbt. Akut fel? Ring oss direkt.">
+<link rel="canonical" href="https://www.akekyl.se/kontakt.html">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__mark" src="assets/img/logo-icon.png" alt="Arkipelag Kyl & Energi logotyp">
+      <span class="brand__text">Arkipelag Kyl & Energi<small>Kyla · Värme · Energi</small></span>
+    </a>
+    <nav class="nav" aria-label="Huvudmeny">
+      <ul class="nav__links">
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="foretag.html">Företag</a></li>
+        <li><a href="privat.html">Privat</a></li>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a class="nav__phone nav__phone-label" href="tel:+46708198818">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.164-1.462l-3.6-.9a1.5 1.5 0 0 0-1.53.44l-.83.98a13.5 13.5 0 0 1-6.06-6.06l.98-.83a1.5 1.5 0 0 0 .44-1.53l-.9-3.6A1.5 1.5 0 0 0 6.372 3H5.25A2.25 2.25 0 0 0 2.25 5.25v1.5Z"/></svg>
+          0708-19 88 18
+        </a>
+        <a class="btn btn--primary btn--sm" href="#offert">Begär offert</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" id="navToggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+          <span class="visually-hidden">Öppna meny</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Hem</a>
+    <a href="foretag.html">Företag</a>
+    <a href="privat.html">Privat</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="tel:+46708198818">Ring 0708-19 88 18</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-block: var(--space-6) 0;">
+    <div class="container" style="padding-block: var(--space-7) var(--space-6); max-width: 760px;">
+      <span class="eyebrow">Kontakt</span>
+      <h1>Hör av dig så hjälper vi dig</h1>
+      <p class="lead">Ring, mejla eller fyll i offertformuläret. Vi återkommer snabbt.</p>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c100-32 200-32 300 0s200 32 300 0 200-32 300 0 200 32 300 0V80H0Z"/></svg>
+  </section>
+
+  <section class="section" id="offert">
+    <div class="container grid grid--2" style="align-items:flex-start; gap: var(--space-8);">
+
+      <form class="form-card" id="quoteForm" novalidate>
+        <div class="wizard-meta">Steg <span id="stepCurrent">1</span> av 6</div>
+        <div class="wizard-progress" id="wizardProgress">
+          <span class="is-active"></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="wizard-step is-active" data-step="1">
+          <h3>Vem är du?</h3>
+          <p style="font-size: var(--fs-sm); margin-bottom: var(--space-5);">Vi visar rätt frågor beroende på vad som passar dig.</p>
+          <div class="choice-grid">
+            <label class="choice-card">
+              <input type="radio" name="customerType" value="foretag" required>
+              <strong>Företag</strong>
+              <span>Butik, fastighet, restaurang, industri</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="customerType" value="privat" required>
+              <strong>Privatperson</strong>
+              <span>Villa, fritidshus, lägenhet</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="wizard-step" data-step="2">
+          <h3>Behov</h3>
+          <p style="font-size: var(--fs-sm); margin-bottom: var(--space-5);">Vad gäller det?</p>
+          <div class="choice-grid" data-group-for="foretag">
+            <label class="choice-card"><input type="radio" name="behov" value="ny-anlaggning"><strong>Ny anläggning</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="entreprenad"><strong>Entreprenad</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="service"><strong>Service</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="felsokning"><strong>Felsökning</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="serviceavtal"><strong>Serviceavtal / Årlig kontroll</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="forebyggande"><strong>Förebyggande underhåll</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="ombyggnad"><strong>Ombyggnad / utbyte</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="energioptimering"><strong>Energioptimering</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="annat-foretag"><strong>Annat</strong></label>
+          </div>
+          <div class="choice-grid" data-group-for="privat" hidden>
+            <label class="choice-card"><input type="radio" name="behov" value="ny-installation-privat"><strong>Ny installation</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="service-privat"><strong>Service</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="felsokning-privat"><strong>Felsökning</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="forebyggande-privat"><strong>Förebyggande underhåll</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="ombyggnad-privat"><strong>Ombyggnad / utbyte</strong></label>
+            <label class="choice-card"><input type="radio" name="behov" value="annat-privat"><strong>Annat</strong></label>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="wizard-step" data-step="3">
+          <h3>System</h3>
+          <p style="font-size: var(--fs-sm); margin-bottom: var(--space-5);">Vilket system gäller det?</p>
+          <div class="choice-grid" data-group-for="foretag">
+            <label class="choice-card"><input type="radio" name="system" value="varukyla"><strong>Varukyla</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="restaurangkyla"><strong>Restaurangkyla</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="komfortkyla"><strong>Komfortkyla (AC)</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="kyl-frysrum"><strong>Kyl- och frysrum</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="industrikyla"><strong>Industrikyla</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="varmepump-foretag"><strong>Värmepump</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="osaker-foretag"><strong>Jag är osäker</strong></label>
+          </div>
+          <div class="choice-grid" data-group-for="privat" hidden>
+            <label class="choice-card"><input type="radio" name="system" value="luft-luft"><strong>Luft/luft</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="luft-vatten"><strong>Luft/vatten</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="ac-privat"><strong>AC (komfortkyla)</strong></label>
+            <label class="choice-card"><input type="radio" name="system" value="osaker-privat"><strong>Jag är osäker</strong></label>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="wizard-step" data-step="4">
+          <h3>Tidsplan</h3>
+          <div class="choice-grid">
+            <label class="choice-card"><input type="radio" name="tidsplan" value="ingen-brådska"><strong>Ingen brådska</strong></label>
+            <label class="choice-card"><input type="radio" name="tidsplan" value="nagra-dagar"><strong>Inom några dagar</strong></label>
+            <label class="choice-card"><input type="radio" name="tidsplan" value="snarast"><strong>Så snart som möjligt</strong></label>
+            <label class="choice-card"><input type="radio" name="tidsplan" value="akut" id="tidsplanAkut"><strong>Akut – står still</strong></label>
+          </div>
+          <div class="card mt-6" id="akutNotice" hidden style="border-color: rgba(232,98,44,0.35); background: rgba(232,98,44,0.06);">
+            <h3 style="color: var(--color-warm-dark);">Har du ett akut driftstopp?</h3>
+            <p>Ring oss direkt så hjälper vi dig så snabbt som möjligt. Du kan så klart även fortsätta med formuläret.</p>
+            <a class="btn btn--warm mt-4" href="tel:+46708198818">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.164-1.462l-3.6-.9a1.5 1.5 0 0 0-1.53.44l-.83.98a13.5 13.5 0 0 1-6.06-6.06l.98-.83a1.5 1.5 0 0 0 .44-1.53l-.9-3.6A1.5 1.5 0 0 0 6.372 3H5.25A2.25 2.25 0 0 0 2.25 5.25v1.5Z"/></svg>
+              Ring 0708-19 88 18
+            </a>
+          </div>
+          <div class="field mt-6">
+            <label for="description">Kort beskrivning (frivilligt)</label>
+            <textarea id="description" name="description" placeholder="Berätta gärna mer om anläggningen/huset och vad du behöver hjälp med."></textarea>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="wizard-step" data-step="5">
+          <h3>Handlingar</h3>
+          <p style="font-size: var(--fs-sm); margin-bottom: var(--space-5);">Har du redan ritningar eller handlingar? Bifoga dem gärna så kan vi ge en mer träffsäker offert.</p>
+          <div class="choice-grid">
+            <label class="choice-card"><input type="radio" name="handlingar" value="ja" id="handlingarJa"><strong>Ja, jag kan bifoga filer</strong></label>
+            <label class="choice-card"><input type="radio" name="handlingar" value="nej" id="handlingarNej"><strong>Nej</strong></label>
+          </div>
+          <div class="field mt-6" id="fileUploadField" hidden>
+            <label for="attachments">Bifoga filer</label>
+            <input type="file" id="attachments" name="attachments" multiple>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="wizard-step" data-step="6">
+          <h3>Kontakt</h3>
+          <div class="field" data-group-for="foretag">
+            <label for="company">Företagsnamn *</label>
+            <input type="text" id="company" name="company" required autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="name">Kontaktperson *</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="email">E-post</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="ort">Adress eller ort</label>
+            <input type="text" id="ort" name="ort" placeholder="t.ex. Karlskrona" autocomplete="address-level2">
+          </div>
+          <div class="field" data-group-for="foretag">
+            <label for="orgnr">Organisationsnummer (frivilligt)</label>
+            <input type="text" id="orgnr" name="orgnr">
+          </div>
+          <p id="contactHint" style="font-size: var(--fs-xs); color: var(--color-muted-light);">Ange minst telefon eller e-post så vi kan återkomma.</p>
+
+          <div class="card mt-4" style="background: var(--color-surface-alt); border-style: dashed;" id="summaryBox"></div>
+
+          <div class="field mt-6">
+            <label class="flex items-center gap-3" style="font-weight:500;">
+              <input type="checkbox" name="consent" required style="width:auto;">
+              Jag samtycker till att Arkipelag Kyl & Energi behandlar mina personuppgifter i syfte att besvara min förfrågan. Läs mer i vår <a href="integritetspolicy.html" style="color:var(--color-accent-dark);">integritetspolicy</a>. *
+            </label>
+          </div>
+        </div>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn--ghost" id="btnBack">Tillbaka</button>
+          <button type="button" class="btn btn--primary" id="btnNext">Nästa</button>
+          <button type="submit" class="btn btn--primary" id="btnSubmit" hidden>Skicka förfrågan</button>
+        </div>
+
+        <div class="wizard-success" id="wizardSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          <h3>Tack! Din förfrågan är skickad.</h3>
+          <p>Vi återkommer så snart vi kan, oftast inom en arbetsdag. Brådskande? Ring 0708-19 88 18.</p>
+        </div>
+      </form>
+
+      <aside>
+        <div class="card">
+          <h3>Direktkontakt</h3>
+          <ul style="display:flex; flex-direction:column; gap: var(--space-4); margin-top: var(--space-4);">
+            <li>
+              <span class="eyebrow" style="display:block; margin-bottom:2px;">Telefon</span>
+              <a href="tel:+46708198818" style="font-weight:600;">0708-19 88 18</a>
+            </li>
+            <li>
+              <span class="eyebrow" style="display:block; margin-bottom:2px;">E-post</span>
+              <a href="mailto:Info@AkeKyl.se" style="font-weight:600;">Info@AkeKyl.se</a>
+            </li>
+            <li>
+              <span class="eyebrow" style="display:block; margin-bottom:2px;">Plats</span>
+              <span style="font-weight:600;">Karlskrona, Blekinge</span>
+            </li>
+          </ul>
+        </div>
+        <div class="card mt-6" id="akut" style="border-color: rgba(232,98,44,0.3); background: rgba(232,98,44,0.04);">
+          <h3 style="color: var(--color-warm-dark);">Akut fel på kylsystem?</h3>
+          <p>Snabb hjälp för företag med serviceavtal.</p>
+          <a class="btn btn--warm mt-4" href="tel:+46708198818">Ring direkt</a>
+        </div>
+        <p class="mt-6" style="font-size: var(--fs-sm);">
+          <a href="index.html" style="color:var(--color-accent-dark); font-weight:600;">← Tillbaka till tjänster</a> ·
+          <a href="foretag.html" style="color:var(--color-accent-dark); font-weight:600;">Företag</a> ·
+          <a href="privat.html" style="color:var(--color-accent-dark); font-weight:600;">Privat</a>
+        </p>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="assets/img/logo-icon.png" alt="Arkipelag Kyl & Energi logotyp">
+        <span class="brand__text">Arkipelag Kyl & Energi<small>Kyla · Värme · Energi</small></span>
+      </a>
+      <p>Lokalt kyl- och energiföretag med bas i Karlskrona, verksamma i hela Blekinge.</p>
+    </div>
+    <div>
+      <h4>Tjänster</h4>
+      <ul>
+        <li><a href="foretag.html">Företag & fastigheter</a></li>
+        <li><a href="privat.html">Värmepump privat</a></li>
+        <li><a href="foretag.html#energioptimering">Energioptimering</a></li>
+        <li><a href="kontakt.html#akut">Akut fel</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Om företaget</h4>
+      <ul>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+46708198818">0708-19 88 18</a></li>
+        <li><a href="mailto:Info@AkeKyl.se">Info@AkeKyl.se</a></li>
+        <li>Karlskrona, Blekinge</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Arkipelag Kyl & Energi AB. Alla rättigheter förbehållna.</span>
+    <span>Org.nr 559590-8111</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/wizard.js"></script>
+</body>
+</html>
