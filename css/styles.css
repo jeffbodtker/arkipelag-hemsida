@@ -1052,6 +1052,16 @@ p { color: var(--color-muted); }
   z-index: 0;
   background-image: radial-gradient(circle at 85% 15%, rgba(255,255,255,0.16), transparent 45%);
 }
+.showcase-card--photo {
+  background-image:
+    linear-gradient(190deg, rgba(11,61,92,0.15) 0%, rgba(11,61,92,0.1) 30%, rgba(7,43,65,0.55) 68%, rgba(7,43,65,0.92) 100%),
+    var(--photo);
+  background-size: cover;
+  background-position: var(--photo-position, center);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease, background-size 0.6s var(--ease-out);
+}
+.showcase-card--photo:hover { background-size: 108%; }
+.showcase-card--photo .showcase-card__icon { display: none; }
 .showcase-card__icon {
   position: absolute;
   right: -18px; bottom: -18px;
