@@ -1,79 +1,93 @@
-// Arkipelag Kyl & Energi — animerad värmepumpsjämförelse (privat.html)
+// Arkipelag Kyl & Energi — värmepumpsväljare (privat.html)
+//
+// OBS: Intresseanmälan-formuläret har ingen serverdel ännu — koppla
+// `form.addEventListener('submit', ...)` nedan till ett formulär-API
+// (t.ex. Web3Forms eller Formspree) innan sidan går live, annars
+// försvinner inskickade intresseanmälningar.
 
 document.addEventListener('DOMContentLoaded', () => {
-  const section = document.getElementById('vp-jamforelse');
-  if (!section) return;
+  // ---- Intresseanmälan-modal -----------------------------------------------
+  const overlay = document.getElementById('vpModalOverlay');
+  const modal = document.getElementById('vpModal');
+  const closeBtn = document.getElementById('vpModalClose');
+  const doneBtn = document.getElementById('vpModalDone');
+  const formWrap = document.getElementById('vpModalForm');
+  const successWrap = document.getElementById('vpModalSuccess');
+  const form = document.getElementById('vpInterestForm');
+  if (!overlay || !modal || !form) return;
 
-  const chips = Array.from(section.querySelectorAll('.vp-chip'));
-  const cards = Array.from(section.querySelectorAll('.vp-kort'));
-  const llCard = section.querySelector('[data-card="ll"]');
-  const lvCard = section.querySelector('[data-card="lv"]');
+  const modalType = document.getElementById('vpModalType');
+  const modalTitle = document.getElementById('vpModalTitle');
+  const inputType = document.getElementById('vpInterestTypeInput');
+  const phoneField = document.getElementById('vpPhone');
+  const emailField = document.getElementById('vpEmail');
+  const contactHint = document.getElementById('vpContactHint');
+  const nameField = document.getElementById('vpName');
 
-  function applyChoice(choice) {
-    chips.forEach((chip) => chip.classList.toggle('is-active', chip.dataset.choice === choice));
+  let lastFocused = null;
 
-    if (choice === 'el') {
-      llCard.classList.add('rek');
-      lvCard.classList.remove('rek');
-      llCard.classList.remove('dimmad');
-      lvCard.classList.add('dimmad');
-    } else if (choice === 'vatten') {
-      lvCard.classList.add('rek');
-      llCard.classList.remove('rek');
-      lvCard.classList.remove('dimmad');
-      llCard.classList.add('dimmad');
-    } else {
-      cards.forEach((card) => card.classList.remove('rek', 'dimmad'));
-    }
+  function openModal(button) {
+    const type = button.dataset.type || '';
+
+    modalType.textContent = type;
+    modalTitle.textContent = `Intresseanmälan — ${type}`;
+
+    formWrap.hidden = false;
+    successWrap.hidden = true;
+    form.reset();
+    inputType.value = type;
+
+    lastFocused = document.activeElement;
+    overlay.hidden = false;
+    modal.hidden = false;
+    requestAnimationFrame(() => {
+      overlay.classList.add('is-open');
+      modal.classList.add('is-open');
+    });
+    document.body.style.overflow = 'hidden';
+    nameField?.focus();
   }
 
-  chips.forEach((chip) => {
-    chip.addEventListener('click', () => applyChoice(chip.dataset.choice));
+  function closeModal() {
+    overlay.classList.remove('is-open');
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      overlay.hidden = true;
+      modal.hidden = true;
+    }, 250);
+    lastFocused?.focus();
+  }
+
+  document.querySelectorAll('.vp-want-btn').forEach((btn) => {
+    btn.addEventListener('click', () => openModal(btn));
   });
 
-  applyChoice('el');
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  doneBtn?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
 
-  // Entrance animation once the section scrolls into view
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          cards.forEach((card, i) => {
-            setTimeout(() => card.classList.add('syns'), i * 120);
-          });
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.2 });
-    observer.observe(section);
-  } else {
-    cards.forEach((card) => card.classList.add('syns'));
-  }
-
-  // 3D tilt + cursor spotlight on hover (skipped for touch / reduced-motion users)
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
-  if (!prefersReducedMotion && !isCoarsePointer) {
-    cards.forEach((card) => {
-      const inner = card.querySelector('.vp-3d');
-      const glans = card.querySelector('.vp-glans');
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const px = x / rect.width;
-        const py = y / rect.height;
-        const tiltX = (py - 0.5) * -6;
-        const tiltY = (px - 0.5) * 6;
-        inner.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-        if (glans) {
-          glans.style.setProperty('--gx', `${px * 100}%`);
-          glans.style.setProperty('--gy', `${py * 100}%`);
-        }
-      });
-      card.addEventListener('mouseleave', () => {
-        inner.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      });
+  [phoneField, emailField].forEach((field) => {
+    field?.addEventListener('input', () => {
+      if (contactHint) contactHint.style.color = '';
     });
-  }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const hasContact = Boolean(phoneField.value.trim() || emailField.value.trim());
+    if (!form.checkValidity() || !hasContact) {
+      if (!hasContact && contactHint) contactHint.style.color = 'var(--color-danger)';
+      form.reportValidity();
+      return;
+    }
+
+    // TODO: skicka `new FormData(form)` till ett formulär-API här.
+
+    formWrap.hidden = true;
+    successWrap.hidden = false;
+  });
 });

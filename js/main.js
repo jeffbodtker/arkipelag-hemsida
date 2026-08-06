@@ -62,4 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
       timelineItems.forEach((item) => item.classList.add('is-active'));
     }
   }
+
+  // ---- Showcase card video (pause for reduced-motion users) --------------
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.showcase-card__video').forEach((video) => video.pause());
+  }
 });
