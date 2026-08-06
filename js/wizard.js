@@ -1,10 +1,7 @@
 // Arkipelag Kyl & Energi — offertwizard (kontakt.html)
 //
-// OBS: Detta är enbart klientlogik. Formuläret har ingen serverdel ännu —
-// koppla `form.addEventListener('submit', ...)` nedan till ett formulär-API
-// (t.ex. Web3Forms, Formspree eller ett eget endpoint) innan sidan går live,
-// annars försvinner inskickade förfrågningar. Web3Forms/Formspree stödjer
-// även filbifogning om "Handlingar"-steget ska fungera på riktigt.
+// Formuläret skickas till Netlify Forms (data-netlify="true" på <form>).
+// Inskickade förfrågningar dyker upp under Forms i Netlify-dashboarden.
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('quoteForm');
@@ -191,12 +188,22 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (!validateStep(currentStep)) return;
 
-    // TODO: skicka `new FormData(form)` till ett formulär-API här.
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = 'Skickar...';
 
-    form.querySelectorAll('.wizard-step, .wizard-meta, .wizard-progress, .wizard-nav').forEach((el) => {
-      el.style.display = 'none';
-    });
-    wizardSuccess.classList.add('is-active');
+    fetch('/', { method: 'POST', body: new FormData(form) })
+      .then((res) => {
+        if (!res.ok) throw new Error('Nätverksfel');
+        form.querySelectorAll('.wizard-step, .wizard-meta, .wizard-progress, .wizard-nav').forEach((el) => {
+          el.style.display = 'none';
+        });
+        wizardSuccess.classList.add('is-active');
+      })
+      .catch(() => {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = 'Skicka förfrågan';
+        alert('Något gick fel när förfrågan skulle skickas. Ring oss gärna istället på 0708-19 88 18.');
+      });
   });
 
   // Deep-link pre-fill, e.g. kontakt.html?behov=serviceavtal#offert

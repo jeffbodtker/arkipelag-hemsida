@@ -1,9 +1,7 @@
 // Arkipelag Kyl & Energi — värmepumpsväljare (privat.html)
 //
-// OBS: Intresseanmälan-formuläret har ingen serverdel ännu — koppla
-// `form.addEventListener('submit', ...)` nedan till ett formulär-API
-// (t.ex. Web3Forms eller Formspree) innan sidan går live, annars
-// försvinner inskickade intresseanmälningar.
+// Intresseanmälan skickas till Netlify Forms (data-netlify="true" på <form>).
+// Inskickade anmälningar dyker upp under Forms i Netlify-dashboarden.
 
 document.addEventListener('DOMContentLoaded', () => {
   // ---- Intresseanmälan-modal -----------------------------------------------
@@ -23,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailField = document.getElementById('vpEmail');
   const contactHint = document.getElementById('vpContactHint');
   const nameField = document.getElementById('vpName');
+  const submitBtn = form.querySelector('button[type="submit"]');
 
   let lastFocused = null;
 
@@ -36,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     successWrap.hidden = true;
     form.reset();
     inputType.value = type;
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Skicka intresseanmälan';
 
     lastFocused = document.activeElement;
     overlay.hidden = false;
@@ -85,9 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // TODO: skicka `new FormData(form)` till ett formulär-API här.
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Skickar...';
 
-    formWrap.hidden = true;
-    successWrap.hidden = false;
+    fetch('/', { method: 'POST', body: new FormData(form) })
+      .then((res) => {
+        if (!res.ok) throw new Error('Nätverksfel');
+        formWrap.hidden = true;
+        successWrap.hidden = false;
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Skicka intresseanmälan';
+        alert('Något gick fel när anmälan skulle skickas. Ring oss gärna istället på 0708-19 88 18.');
+      });
   });
 });

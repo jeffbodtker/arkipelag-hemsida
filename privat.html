@@ -318,7 +318,9 @@
     <h3 id="vpModalTitle">Intresseanmälan</h3>
     <p class="modal__subtitle">Berätta lite om ditt hus, så återkommer vi med förslag på lösning och pris.</p>
 
-    <form id="vpInterestForm">
+    <form id="vpInterestForm" name="varmepumpintresse" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="varmepumpintresse">
+      <p class="visually-hidden"><label>Fyll inte i det här fältet om du är människa: <input name="bot-field"></label></p>
       <input type="hidden" id="vpInterestTypeInput" name="type">
       <div class="field">
         <label for="vpName">Namn *</label>
