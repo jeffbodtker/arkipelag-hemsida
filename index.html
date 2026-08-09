@@ -71,7 +71,8 @@
     <nav class="nav" aria-label="Huvudmeny">
       <ul class="nav__links">
         <li><a href="index.html" aria-current="page">Hem</a></li>
-        <li><a href="foretag.html">Företag</a></li>
+        <li><a href="foretag.html">Kyla</a></li>
+        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
         <li><a href="om-oss.html">Om oss</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
@@ -103,7 +104,7 @@
   <nav class="menu-drawer__nav" aria-label="Huvudmeny">
     <div class="menu-accordion">
       <button class="menu-accordion__trigger" type="button" aria-expanded="false">
-        Företag
+        Kyla
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
       </button>
       <div class="menu-accordion__panel">
@@ -112,7 +113,21 @@
           <a href="foretag.html#restaurangkyla">Restaurangkyla</a>
           <a href="foretag.html#industrikyla">Industrikyla</a>
           <a href="foretag.html#kyl-frysrum">Kyl- och frysrum</a>
-          <a class="menu-accordion__all" href="foretag.html">Visa alla tjänster för företag →</a>
+          <a class="menu-accordion__all" href="foretag.html">Visa alla tjänster →</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu-accordion">
+      <button class="menu-accordion__trigger" type="button" aria-expanded="false">
+        Fastighetsägare
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+      </button>
+      <div class="menu-accordion__panel">
+        <div class="menu-accordion__panel-inner">
+          <a href="fastighetsagare.html#komfortkyla">Komfortkyla</a>
+          <a href="fastighetsagare.html#ventkyla">Ventkyla</a>
+          <a href="fastighetsagare.html#varmepumpar">Värmepumpar</a>
+          <a class="menu-accordion__all" href="fastighetsagare.html">Visa alla tjänster →</a>
         </div>
       </div>
     </div>
@@ -154,8 +169,12 @@
         <h3>Vad gäller det?</h3>
         <p style="color:rgba(255,255,255,0.65); font-size: var(--fs-sm); margin-top:-8px; margin-bottom: var(--space-4);">Välj det som passar dig så visar vi rätt tjänster.</p>
         <a class="hero__choice" href="foretag.html">
-          <strong>Företag →</strong>
-          <span>Butiker, fastigheter, industri & restaurang</span>
+          <strong>Kyla →</strong>
+          <span>Butik, restaurang & industri</span>
+        </a>
+        <a class="hero__choice" href="fastighetsagare.html">
+          <strong>Fastighetsägare →</strong>
+          <span>Komfortkyla, ventilation & värmepumpar</span>
         </a>
         <a class="hero__choice" href="kontakt.html#akut" style="border-color: rgba(232,98,44,0.4);">
           <strong style="color:#FFB199;">Akut fel →</strong>
@@ -192,17 +211,26 @@
     <div class="container">
       <div class="section-head text-center mx-auto">
         <span class="eyebrow">Kom igång</span>
-        <h2 class="heading-accent">Så hjälper vi <em>ert företag.</em></h2>
-        <p>Kyla, värme och energioptimering med samma lokala tekniker hela vägen.</p>
+        <h2 class="heading-accent">Vad gäller det? — <em>vi guidar er rätt.</em></h2>
+        <p>Välj det som passar er så visar vi rätt tjänster, med samma lokala tekniker hela vägen.</p>
       </div>
       <div class="showcase-grid">
-        <a class="showcase-card showcase-card--video showcase-card--wide" href="foretag.html" style="--c1:#145E88; --c2:#072B41;">
+        <a class="showcase-card showcase-card--video" href="foretag.html" style="--c1:#145E88; --c2:#072B41;">
           <video class="showcase-card__media" src="assets/img/Frysrum.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
           <span class="showcase-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0-4 4m4-4H3"/></svg></span>
           <div class="showcase-card__content">
-            <span class="showcase-card__eyebrow">Företag & fastigheter</span>
-            <h3>Kommersiell kyla & energi</h3>
-            <p>Varukyla, restaurangkyla, industrikyla, kyl-/frysrum, komfortkyla, energioptimering och serviceavtal med prioriterad akuthjälp.</p>
+            <span class="showcase-card__eyebrow">Butik, restaurang & industri</span>
+            <h3>Kommersiell kyla</h3>
+            <p>Varukyla, restaurangkyla, industrikyla och kyl-/frysrum med serviceavtal och prioriterad akuthjälp.</p>
+          </div>
+        </a>
+        <a class="showcase-card showcase-card--image" href="fastighetsagare.html" style="--c1:#17AECE; --c2:#0B4C5C; --photo-position: center 68%;">
+          <img class="showcase-card__media" src="assets/img/varmepump-card.jpg" alt="" aria-hidden="true">
+          <span class="showcase-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0-4 4m4-4H3"/></svg></span>
+          <div class="showcase-card__content">
+            <span class="showcase-card__eyebrow">Fastighetsägare</span>
+            <h3>Komfortkyla & värmepumpar</h3>
+            <p>Komfortkyla, kyla via ventilation och värmepumpar för fastigheter och kommersiella lokaler.</p>
           </div>
         </a>
       </div>
@@ -331,8 +359,9 @@
     <div>
       <h4>Tjänster</h4>
       <ul>
-        <li><a href="foretag.html">Företag & fastigheter</a></li>
-        <li><a href="foretag.html#energioptimering">Energioptimering</a></li>
+        <li><a href="foretag.html">Kyla för företag</a></li>
+        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+        <li><a href="privat.html">Privatpersoner</a></li>
         <li><a href="kontakt.html#akut">Akut fel</a></li>
       </ul>
     </div>
