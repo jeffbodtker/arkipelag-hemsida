@@ -1,6 +1,6 @@
 # Arkipelag Kyl & Energi AB
 
-> Lokalt kyl- och energiföretag med bas i Karlskrona, Blekinge. Vi hjälper företag och privatpersoner i Karlskrona, Ronneby, Karlshamn och stora delar av Blekinge med kyla, värmepumpar och energioptimering.
+> Lokalt kyl- och energiföretag med bas i Karlskrona, Blekinge. Vi hjälper företag och fastighetsägare i Karlskrona, Ronneby, Karlshamn och stora delar av Blekinge med kyla, värmepumpar och energioptimering.
 
 ## Företag
 - Namn: Arkipelag Kyl & Energi AB (AKE)
@@ -19,15 +19,8 @@
 - Serviceavtal med prioriterad akuthjälp
 - Se: /foretag.html
 
-## Tjänster för privatpersoner
-- Luftvärmepump (luft/luft och luft/vatten)
-- AC för villa och fritidshus
-- Service och underhåll av värmepumpar
-- Se: /privat.html
-
 ## Sidor
 - Startsida: /index.html
 - Företag: /foretag.html
-- Privat: /privat.html
 - Om oss: /om-oss.html
 - Kontakt & offertförfrågan: /kontakt.html
