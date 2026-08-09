@@ -297,6 +297,27 @@ p { color: var(--color-muted); }
 }
 .badge svg { width: 15px; height: 15px; color: var(--color-accent-dark); flex-shrink: 0; }
 
+/* ---- Tag lists (grouped service items inside a card) ---------------------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+.tag-list li {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.8rem;
+}
+.card--dark .tag-list li,
+.section--dark .tag-list li { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: #fff; }
+
 /* ---- Stat block ------------------------------------------------------------ */
 .stat-num {
   font-family: var(--font-heading);
@@ -439,9 +460,9 @@ p { color: var(--color-muted); }
     radial-gradient(65% 55% at 88% 100%, rgba(23,174,206,0.22), transparent 62%),
     linear-gradient(to bottom, rgba(7,43,65,0) 0%, rgba(7,43,65,0) 58%, rgba(7,43,65,0.6) 84%, var(--color-primary-dark) 100%),
     linear-gradient(115deg, rgba(5,26,40,0.93) 0%, rgba(7,43,65,0.82) 40%, rgba(11,61,92,0.55) 75%, rgba(11,61,92,0.35) 100%),
-    url('../assets/img/hero-karlskrona.jpg');
+    var(--hero-img, url('../assets/img/hero-karlskrona.jpg'));
   background-size: cover, cover, cover, cover;
-  background-position: center, center, center, center 60%;
+  background-position: center, center, center, var(--hero-img-position, center 60%);
 }
 .hero::after {
   content: "";
@@ -1062,6 +1083,20 @@ p { color: var(--color-muted); }
 }
 .showcase-card--wide { grid-column: 1 / -1; }
 @media (max-width: 760px) { .showcase-grid { grid-template-columns: 1fr; } .showcase-card--wide { grid-column: auto; } }
+
+/* ---- Asymmetric row (used to keep secondary choices visually smaller than the primary one) */
+.showcase-row {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: var(--space-6);
+  align-items: stretch;
+}
+@media (max-width: 760px) { .showcase-row { grid-template-columns: 1fr; } }
+.showcase-row .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .showcase-card {
   position: relative;
