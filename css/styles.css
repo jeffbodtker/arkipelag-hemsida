@@ -1143,6 +1143,13 @@ p { color: var(--color-muted); }
   transition: transform 0.6s var(--ease-out);
 }
 .showcase-card:hover .showcase-card__media { transform: scale(1.06); }
+.showcase-card--video .showcase-card__media {
+  /* The source clip is a square (1:1) recording; cropping it with
+     object-fit: cover into a wide short card only shows a thin center
+     sliver and reads as heavily zoomed in. Show the full frame instead
+     and let the card's brand gradient fill the letterboxed sides. */
+  object-fit: contain;
+}
 .showcase-card--video::after,
 .showcase-card--image::after {
   content: "";
