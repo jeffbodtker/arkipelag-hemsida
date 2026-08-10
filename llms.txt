@@ -15,7 +15,7 @@
 - Restaurang & storkök: restaurangkyla, storkökskyla, livsmedelskyla
 - Industri & teknisk kyla: industrikyla, processkyla, produktionskyla, server- och teknikrum, vätskekylare, kondensorkylning
 - Drift & service: felsökning, akut kylservice, förebyggande underhåll, läckagekontroll, köldmediehantering, energioptimering
-- Se: /foretag.html
+- Se: /kyla.html
 
 ## Tjänster för fastighetsägare — fastighetskyla & värmepumpar
 - Fastighetskyla: komfortkyla, kylbatterier och DX-kyla integrerade i befintlig ventilation, klimatkyla, frikyla
@@ -38,7 +38,7 @@
 
 ## Sidor
 - Startsida: /index.html
-- Kyla & kommersiellt: /foretag.html
+- Kyla & kommersiellt: /kyla.html
 - Fastighetskyla & värmepumpar: /fastighetsagare.html
 - Service & underhåll: /service.html
 - Privatpersoner: /privat.html
