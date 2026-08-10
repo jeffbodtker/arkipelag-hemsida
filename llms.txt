@@ -1,6 +1,6 @@
 # Arkipelag Kyl & Energi AB
 
-> Lokalt kylteknikföretag med bas i Karlskrona, Blekinge. Arkipelag Kyl & Energi är i första hand ett kylteknikföretag — kommersiell kyla för butik, restaurang och industri är kärnverksamheten. Vi hjälper också fastighetsägare med komfortkyla, ventilation, värme och energi, samt privatpersoner med värmepumpar och AC i mindre omfattning.
+> Lokalt kylteknikföretag med bas i Karlskrona, Blekinge. Arkipelag Kyl & Energi är i första hand ett kylteknikföretag — kommersiell kyla för butik, restaurang och industri är kärnverksamheten. Vi hjälper också fastighetsägare med fastighetskyla (komfortkyla, kylbatterier) och värmepumpar, samt privatpersoner med värmepumpar och AC i mindre omfattning.
 
 ## Företag
 - Namn: Arkipelag Kyl & Energi AB (AKE)
@@ -17,10 +17,12 @@
 - Drift & service: felsökning, akut kylservice, förebyggande underhåll, läckagekontroll, köldmediehantering, energioptimering
 - Se: /foretag.html
 
-## Tjänster för fastighetsägare — fastighet & komfort
-- Komfortkyla & ventilation: komfortkyla, kyla i ventilation, kylbatterier, DX-kyla, frikyla
-- Värme & energi: värmepumpar, luft/vatten, bergvärme, frånluftslösningar, värmeåtervinning, energioptimering
-- Bygg & entreprenad: projektering, dimensionering, installation, samordning, dokumentation, driftsättning
+## Tjänster för fastighetsägare — fastighetskyla & värmepumpar
+- Fastighetskyla: komfortkyla, kylbatterier och DX-kyla integrerade i befintlig ventilation, klimatkyla, frikyla
+- Värmepumpar för fastigheter: luft/vatten, bergvärme, dimensionering, installation, service, utbyte
+- Kylentreprenad: projektering, dimensionering, installation, samordning, dokumentation, driftsättning i byggprojekt
+- Service & underhåll av kylsystem: service, felsökning, serviceavtal, köldmediekontroller, energioptimering av kylsystem
+- Värmeåtervinning från kylsystem, framför allt i butiker och restauranger
 - Se: /fastighetsagare.html
 
 ## Service & underhåll (central del av verksamheten)
@@ -37,7 +39,7 @@
 ## Sidor
 - Startsida: /index.html
 - Kyla & kommersiellt: /foretag.html
-- Fastighet & komfort: /fastighetsagare.html
+- Fastighetskyla & värmepumpar: /fastighetsagare.html
 - Service & underhåll: /service.html
 - Privatpersoner: /privat.html
 - Om oss: /om-oss.html
