@@ -1,13 +1,14 @@
 # Arkipelag Kyl & Energi AB
 
-> Lokalt kylteknikföretag med bas i Karlskrona, Blekinge. Arkipelag Kyl & Energi är i första hand ett kylteknikföretag — kommersiell kyla för butik, restaurang och industri är kärnverksamheten. Vi hjälper också fastighetsägare med fastighetskyla (komfortkyla, kylbatterier) och värmepumpar, samt privatpersoner med värmepumpar och AC i mindre omfattning.
+> Lokalt kylteknikföretag med bas i Karlskrona, Blekinge. Arkipelag Kyl & Energi är i första hand ett kylteknikföretag — kommersiell kyla för butik, restaurang och industri är kärnverksamheten. Vi hjälper också fastighetsägare med fastighetskyla (komfortkyla, kylbatterier) och värmepumpar, samt privatpersoner med värmepumpar och AC i mindre omfattning. Arbetsområde: Karlskrona, Ronneby, Karlshamn, Rödeby, Lyckeby, Nättraby och övriga Blekinge.
 
 ## Företag
 - Namn: Arkipelag Kyl & Energi AB (AKE)
 - Ort: Karlskrona, Blekinge, Sverige
-- Arbetsområde: Karlskrona, Ronneby, Karlshamn och stora delar av Blekinge
+- Arbetsområde: Karlskrona, Ronneby, Karlshamn och stora delar av Blekinge, bland annat Rödeby, Lyckeby och Nättraby
 - Telefon: 0708-19 88 18
 - E-post: Info@AkeKyl.se
+- Org.nr: 559590-8111
 - Grundare: Jeff Bödtker, certifierad kyltekniker
 
 ## Tjänster för företag — kyla & kommersiellt (huvudområde)
@@ -20,10 +21,13 @@
 ## Tjänster för fastighetsägare — fastighetskyla & värmepumpar
 - Fastighetskyla: komfortkyla, kylbatterier och DX-kyla integrerade i befintlig ventilation, klimatkyla, frikyla
 - Värmepumpar för fastigheter: luft/vatten, bergvärme, dimensionering, installation, service, utbyte
-- Kylentreprenad: projektering, dimensionering, installation, samordning, dokumentation, driftsättning i byggprojekt
+- Komfortkyla och värmepumpar i byggprojekt: projektering, dimensionering, installation, driftsättning och dokumentation för byggföretag och entreprenörer, som underentreprenör
 - Service & underhåll av kylsystem: service, felsökning, serviceavtal, köldmediekontroller, energioptimering av kylsystem
-- Värmeåtervinning från kylsystem, framför allt i butiker och restauranger
 - Se: /fastighetsagare.html
+
+## Kommersiell kyla för butik & restaurang — värmeåtervinning
+- Värmeåtervinning från kyl- och frysaggregat, framför allt relevant för butiker och restauranger som vill sänka energikostnader
+- Se: /kyla.html
 
 ## Service & underhåll (central del av verksamheten)
 - Förebyggande service, akut service, serviceavtal, köldmediekontroller, läckagekontroll, dokumentation, energioptimering
