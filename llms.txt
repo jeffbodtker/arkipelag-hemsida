@@ -16,35 +16,38 @@
 - Restaurang & storkök: restaurangkyla, storkökskyla, livsmedelskyla
 - Industri & teknisk kyla: industrikyla, processkyla, produktionskyla, server- och teknikrum, vätskekylare, kondensorkylning
 - Drift & service: felsökning, akut kylservice, förebyggande underhåll, läckagekontroll, köldmediehantering, energioptimering
-- Se: /kyla.html
+- Se: [Kyla & kommersiellt](https://akekyl.se/kyla.html)
 
 ## Tjänster för fastighetsägare — fastighetskyla & värmepumpar
 - Fastighetskyla: komfortkyla, kylbatterier och DX-kyla integrerade i befintlig ventilation, klimatkyla, frikyla
 - Värmepumpar för fastigheter: luft/vatten, bergvärme, dimensionering, installation, service, utbyte
 - Komfortkyla och värmepumpar i byggprojekt: projektering, dimensionering, installation, driftsättning och dokumentation för byggföretag och entreprenörer, som underentreprenör
 - Service & underhåll av kylsystem: service, felsökning, serviceavtal, köldmediekontroller, energioptimering av kylsystem
-- Se: /fastighetsagare.html
+- Se: [Fastighetskyla & värmepumpar](https://akekyl.se/fastighetsagare.html)
 
 ## Kommersiell kyla för butik & restaurang — värmeåtervinning
 - Värmeåtervinning från kyl- och frysaggregat, framför allt relevant för butiker och restauranger som vill sänka energikostnader
-- Se: /kyla.html
+- Se: [Kyla & kommersiellt](https://akekyl.se/kyla.html)
 
 ## Service & underhåll (central del av verksamheten)
 - Förebyggande service, akut service, serviceavtal, köldmediekontroller, läckagekontroll, dokumentation, energioptimering
-- Se: /service.html
+- Se: [Service & underhåll](https://akekyl.se/service.html)
 
 ## Tjänster för privatpersoner (mindre, kompletterande område)
 - Reparationer och felsökning av befintlig värmepump eller AC
 - Installation av ny värmepump eller AC
 - Rådgivning om val av maskin
 - Försäljning
-- Se: /privat.html
+- Se: [Privatpersoner](https://akekyl.se/privat.html)
 
 ## Sidor
-- Startsida: /index.html
-- Kyla & kommersiellt: /kyla.html
-- Fastighetskyla & värmepumpar: /fastighetsagare.html
-- Service & underhåll: /service.html
-- Privatpersoner: /privat.html
-- Om oss: /om-oss.html
-- Kontakt & offertförfrågan: /kontakt.html
+- [Startsida](https://akekyl.se/index.html): Kylteknikföretag i Karlskrona — översikt över alla tjänsteområden
+- [Kyla & kommersiellt](https://akekyl.se/kyla.html): Varukyla, restaurangkyla, industrikyla, kyl- och frysrum — huvudområdet
+- [Fastighetskyla & värmepumpar](https://akekyl.se/fastighetsagare.html): Komfortkyla, kylbatterier, värmepumpar och entreprenad för fastighetsägare
+- [Service & underhåll](https://akekyl.se/service.html): Serviceavtal, akut service, köldmediekontroller
+- [Privatpersoner](https://akekyl.se/privat.html): Värmepump och AC för villa/hem
+- [Om oss](https://akekyl.se/om-oss.html): Om företaget och grundaren Jeff Bödtker
+- [Kontakt & offertförfrågan](https://akekyl.se/kontakt.html): Kontaktuppgifter och offertformulär
+
+## Optional
+- [Integritetspolicy](https://akekyl.se/integritetspolicy.html): Hantering av personuppgifter
