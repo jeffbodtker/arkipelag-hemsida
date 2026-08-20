@@ -63,8 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ---- Showcase card video (pause for reduced-motion users) --------------
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.showcase-card__video').forEach((video) => video.pause());
+  // ---- Showcase card video (lazy-load until near viewport) ---------------
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lazyVideos = document.querySelectorAll('.showcase-card__media[data-src]');
+  if (lazyVideos.length) {
+    const loadVideo = (video) => {
+      video.src = video.dataset.src;
+      video.removeAttribute('data-src');
+      video.load();
+      if (!reducedMotion) video.play().catch(() => {});
+    };
+    if ('IntersectionObserver' in window) {
+      const videoObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadVideo(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+      lazyVideos.forEach((video) => videoObserver.observe(video));
+    } else {
+      lazyVideos.forEach(loadVideo);
+    }
   }
 });

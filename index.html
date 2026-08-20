@@ -16,6 +16,10 @@
 <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/img/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preload" as="image" href="assets/img/hero-karlskrona.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/styles.css">
 <script type="application/ld+json">
 {
@@ -63,7 +67,7 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="index.html">
-      <img class="brand__mark" src="assets/img/logo-icon.png" alt="Arkipelag Kyl & Energi logotyp">
+      <img class="brand__mark" width="1421" height="523" src="assets/img/logo-icon.png" alt="Arkipelag Kyl & Energi logotyp">
       <span class="brand__text">
         Arkipelag Kyl & Energi
         <small>Kyla · Värme · Energi</small>
@@ -98,7 +102,7 @@
 <aside class="menu-drawer" id="menuDrawer" aria-hidden="true">
   <div class="menu-drawer__top">
     <a class="brand" href="index.html">
-      <img class="brand__mark" src="assets/img/logo-icon-light.png" alt="Arkipelag Kyl & Energi logotyp">
+      <img class="brand__mark" width="1421" height="523" src="assets/img/logo-icon-light.png" alt="Arkipelag Kyl & Energi logotyp">
       <span class="brand__text">Arkipelag Kyl & Energi<small>Kyla · Värme · Energi</small></span>
     </a>
     <button class="menu-drawer__close" id="menuClose" type="button" aria-label="Stäng meny">
@@ -171,7 +175,7 @@
       </div>
 
       <div class="hero__panel">
-        <h3>Vad behöver du hjälp med?</h3>
+        <h2>Vad behöver du hjälp med?</h2>
         <p style="color:rgba(255,255,255,0.65); font-size: var(--fs-sm); margin-top:-8px; margin-bottom: var(--space-4);">Välj det som passar dig så visar vi rätt tjänster.</p>
         <a class="hero__choice" href="kyla.html">
           <strong>Kyla & kommersiellt →</strong>
@@ -225,7 +229,7 @@
       </div>
       <div class="showcase-grid">
         <a class="showcase-card showcase-card--video" href="kyla.html" style="--c1:#145E88; --c2:#072B41;">
-          <video class="showcase-card__media" src="assets/img/Frysrum.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+          <video class="showcase-card__media" data-src="assets/img/Frysrum.mp4" preload="none" muted loop playsinline aria-hidden="true" width="1034" height="1034"></video>
           <span class="showcase-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0-4 4m4-4H3"/></svg></span>
           <div class="showcase-card__content">
             <span class="showcase-card__eyebrow">Butik, restaurang, storkök & industri</span>
@@ -234,7 +238,7 @@
           </div>
         </a>
         <a class="showcase-card showcase-card--image" href="fastighetsagare.html" style="--c1:#17AECE; --c2:#0B4C5C;">
-          <img class="showcase-card__media" src="assets/img/fastighetskyla-collage.jpg" alt="" aria-hidden="true" loading="lazy">
+          <img class="showcase-card__media" src="assets/img/fastighetskyla-collage.jpg" alt="" aria-hidden="true" loading="lazy" width="1200" height="669">
           <span class="showcase-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0-4 4m4-4H3"/></svg></span>
           <div class="showcase-card__content">
             <span class="showcase-card__eyebrow">Fastighetsägare & byggföretag</span>
@@ -390,7 +394,7 @@
   <section class="section">
     <div class="container grid grid--2" style="align-items:center;">
       <figure class="founder-figure">
-        <img class="founder-portrait" src="assets/img/founder-portrait.svg" alt="Illustrerat porträtt av Jeff Bödtker, grundare och kyltekniker på Arkipelag Kyl & Energi">
+        <img class="founder-portrait" src="assets/img/founder-portrait.svg" alt="Illustrerat porträtt av Jeff Bödtker, grundare och kyltekniker på Arkipelag Kyl & Energi" width="400" height="400">
         <figcaption>Jeff Bödtker<span>Grundare & kyltekniker</span></figcaption>
       </figure>
       <div>
@@ -424,7 +428,7 @@
   <div class="container footer-grid">
     <div>
       <a class="brand" href="index.html">
-        <img class="brand__mark" src="assets/img/logo-icon-light.png" alt="Arkipelag Kyl & Energi logotyp">
+        <img class="brand__mark" width="1421" height="523" src="assets/img/logo-icon-light.png" alt="Arkipelag Kyl & Energi logotyp">
         <span class="brand__text">Arkipelag Kyl & Energi<small>Kyla · Värme · Energi</small></span>
       </a>
       <p>Lokalt kylteknikföretag med bas i Karlskrona, verksamma i hela Blekinge.</p>

@@ -2,8 +2,6 @@
    Arkipelag Kyl & Energi — Design System
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
   /* Color — deep ocean navy + wave cyan, from the AKE logo */
   --color-primary: #0B3D5C;
@@ -160,9 +158,9 @@ p { color: var(--color-muted); }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent-dark);
+  color: #0B6E82;
 }
-.section--dark .eyebrow { color: var(--color-accent-light); }
+.section--dark .eyebrow, .hero .eyebrow { color: var(--color-accent-light); }
 
 .section-head {
   max-width: 640px;
@@ -512,7 +510,7 @@ p { color: var(--color-muted); }
   padding: var(--space-6);
   backdrop-filter: blur(6px);
 }
-.hero__panel h3 { color: #fff; margin-bottom: var(--space-4); }
+.hero__panel h2 { color: #fff; font-size: var(--fs-xl); margin-bottom: var(--space-4); }
 .hero__choice {
   display: block;
   padding: var(--space-5);
