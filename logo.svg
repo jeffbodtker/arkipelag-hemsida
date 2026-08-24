@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps"
+     viewBox="0 0 300 300" width="300" height="300">
+  <title>Arkipelag Kyl &amp; Energi</title>
+
+  <!-- Square canvas, white background (BIMI clients crop to circle automatically) -->
+  <rect x="0" y="0" width="300" height="300" fill="#FFFFFF"/>
+
+  <!-- Monogram: A + K merged shape (navy) -->
+  <g>
+    <!-- Left peak ("A") -->
+    <path d="M 62 178 L 104 82 L 118 82 L 130 108 L 116 108 L 111 96 L 88 148 L 108 148 L 101 164 L 81 164 L 76 178 Z"
+          fill="#0E2A52"/>
+    <!-- Right stroke ("K" diagonal) -->
+    <path d="M 130 82 L 148 82 L 118 122 L 155 178 L 137 178 L 108 135 Z"
+          fill="#0E2A52"/>
+  </g>
+
+  <!-- "E" as three chevron bars (light blue), arrow pointing left -->
+  <g fill="#29ABE2">
+    <polygon points="168,90 235,90 235,108 190,108"/>
+    <polygon points="150,122 235,122 235,140 172,140"/>
+    <polygon points="168,154 235,154 235,172 190,172"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="150" y="212" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="34"
+        fill="#0E2A52" letter-spacing="1">ARKIPELAG</text>
+
+  <!-- Small rule, subtitle, small rule -->
+  <line x1="58" y1="235" x2="86" y2="235" stroke="#29ABE2" stroke-width="2"/>
+  <text x="150" y="241" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="16"
+        fill="#29ABE2" letter-spacing="1.5">KYL &amp; ENERGI</text>
+  <line x1="214" y1="235" x2="242" y2="235" stroke="#29ABE2" stroke-width="2"/>
+</svg>
