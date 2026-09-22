@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
           el.style.display = 'none';
         });
         wizardSuccess.classList.add('is-active');
+        form.closest('.form-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       })
       .catch(() => {
         btnSubmit.disabled = false;
