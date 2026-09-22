@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return checked ? checked.value : null;
   }
 
+  // Privatpersoner har oftast inga ritningar/handlingar — hoppa över det steget för dem.
+  function isStepSkipped(n) {
+    return n === 5 && getCustomerType() === 'privat';
+  }
+
   function applyGroupVisibility() {
     const type = getCustomerType();
     form.querySelectorAll('[data-group-for]').forEach((el) => {
@@ -164,13 +169,17 @@ document.addEventListener('DOMContentLoaded', () => {
   btnNext.addEventListener('click', () => {
     if (!validateStep(currentStep)) return;
     if (currentStep === 1) applyGroupVisibility();
-    currentStep = Math.min(currentStep + 1, totalSteps);
+    let next = Math.min(currentStep + 1, totalSteps);
+    while (isStepSkipped(next) && next < totalSteps) next += 1;
+    currentStep = next;
     showStep(currentStep);
     form.closest('.form-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   btnBack.addEventListener('click', () => {
-    currentStep = Math.max(currentStep - 1, 1);
+    let prev = Math.max(currentStep - 1, 1);
+    while (isStepSkipped(prev) && prev > 1) prev -= 1;
+    currentStep = prev;
     showStep(currentStep);
   });
 
