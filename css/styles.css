@@ -876,8 +876,11 @@ p { color: var(--color-muted); }
 .founder-portrait {
   width: 100%;
   max-width: 280px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   margin-inline: auto;
   border-radius: 50%;
+  object-fit: cover;
   box-shadow: var(--shadow-lg);
 }
 .founder-figure { text-align: center; }
