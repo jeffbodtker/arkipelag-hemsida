@@ -316,6 +316,58 @@ p { color: var(--color-muted); }
 .card--dark .tag-list li,
 .section--dark .tag-list li { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: #fff; }
 
+/* ---- Asymmetric grid helper (use sparingly, to create visual rhythm) ------- */
+.grid-span-2 { grid-column: span 2; }
+@media (max-width: 640px) { .grid-span-2 { grid-column: auto; } }
+
+/* ---- Featured card (highlights the primary item in a grid of cards) ------- */
+.card--featured {
+  background: linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
+  border-color: var(--color-accent);
+  position: relative;
+}
+.card--featured .card--icon { background: var(--color-accent); color: var(--color-on-accent); }
+
+/* ---- Bold gradient CTA band ------------------------------------------------ */
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-accent-dark) 100%);
+  box-shadow: var(--shadow-lg);
+  color: #fff;
+}
+.cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 88% 15%, rgba(95,209,230,0.3), transparent 55%);
+  pointer-events: none;
+}
+.cta-band h2 { position: relative; color: #fff; }
+.cta-band p { position: relative; color: rgba(255,255,255,0.78); max-width: 52ch; margin-inline: auto; margin-top: var(--space-2); }
+.cta-band__badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+.cta-band .btn--outline { position: relative; border-color: rgba(255,255,255,0.4); color: #fff; }
+.cta-band .btn--outline:hover { border-color: var(--color-accent-light); background: rgba(255,255,255,0.08); }
+.cta-band-wrap { margin-top: calc(var(--space-9) * -1); position: relative; z-index: 2; }
+@media (max-width: 640px) { .cta-band-wrap { margin-top: calc(var(--space-7) * -1); } }
+
 /* ---- Stat block ------------------------------------------------------------ */
 .stat-num {
   font-family: var(--font-heading);
