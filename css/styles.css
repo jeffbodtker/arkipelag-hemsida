@@ -259,9 +259,10 @@ p { color: var(--color-muted); }
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
 
 .card--elevated { box-shadow: var(--shadow-lg); }
 
@@ -367,6 +368,37 @@ p { color: var(--color-muted); }
 .cta-band .btn--outline:hover { border-color: var(--color-accent-light); background: rgba(255,255,255,0.08); }
 .cta-band-wrap { margin-top: calc(var(--space-9) * -1); position: relative; z-index: 2; }
 @media (max-width: 640px) { .cta-band-wrap { margin-top: calc(var(--space-7) * -1); } }
+
+/* ---- Decorative background blobs (break up flat white sections) ----------- */
+.section--decorated { position: relative; overflow: hidden; }
+.section--decorated::before,
+.section--decorated::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+.section--decorated::before {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(23,174,206,0.16), transparent 70%);
+  top: -140px;
+  right: -120px;
+}
+.section--decorated::after {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(232,98,44,0.12), transparent 70%);
+  bottom: -110px;
+  left: -90px;
+}
+.section--decorated > .container { position: relative; z-index: 1; }
+
+/* ---- Diagonal section edge (dark -> light transition with some bite) ------ */
+.section--angled-bottom { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 32px)); }
+@media (max-width: 640px) { .section--angled-bottom { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 18px)); } }
 
 /* ---- Stat block ------------------------------------------------------------ */
 .stat-num {
