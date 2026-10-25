@@ -58,9 +58,9 @@
   --space-10: 128px;
 
   /* Radius & elevation */
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
   --radius-full: 999px;
 
   --shadow-sm: 0 1px 2px rgba(11, 61, 92, 0.06), 0 1px 1px rgba(11, 61, 92, 0.04);
@@ -159,6 +159,19 @@ p { color: var(--color-muted); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #0B6E82;
+  position: relative;
+  padding-left: 16px;
+}
+.eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-65%);
 }
 .section--dark .eyebrow, .hero .eyebrow { color: var(--color-accent-light); }
 
@@ -256,13 +269,13 @@ p { color: var(--color-muted); }
 /* ---- Cards --------------------------------------------------------------- */
 .card {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-primary-dark);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 6px 6px 0 rgba(23, 174, 206, 0.4);
   transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+.card:hover { transform: translate(3px, 3px); box-shadow: 3px 3px 0 rgba(23, 174, 206, 0.55); border-color: var(--color-accent-dark); }
 
 .card--elevated { box-shadow: var(--shadow-lg); }
 
@@ -369,30 +382,31 @@ p { color: var(--color-muted); }
 .cta-band-wrap { margin-top: calc(var(--space-9) * -1); position: relative; z-index: 2; }
 @media (max-width: 640px) { .cta-band-wrap { margin-top: calc(var(--space-7) * -1); } }
 
-/* ---- Decorative background blobs (break up flat white sections) ----------- */
+/* ---- Decorative diagonal sweep (break up flat white sections) ------------- */
 .section--decorated { position: relative; overflow: hidden; }
-.section--decorated::before,
-.section--decorated::after {
+.section--decorated::before {
   content: "";
   position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
+  width: 220%;
+  height: 160px;
+  background: linear-gradient(90deg, transparent, rgba(23,174,206,0.14) 45%, rgba(23,174,206,0.14) 55%, transparent);
+  top: -30px;
+  left: -60%;
+  transform: rotate(-5deg);
   pointer-events: none;
   z-index: 0;
 }
-.section--decorated::before {
-  width: 440px;
-  height: 440px;
-  background: radial-gradient(circle, rgba(23,174,206,0.16), transparent 70%);
-  top: -140px;
-  right: -120px;
-}
 .section--decorated::after {
-  width: 340px;
-  height: 340px;
-  background: radial-gradient(circle, rgba(232,98,44,0.12), transparent 70%);
-  bottom: -110px;
-  left: -90px;
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-right: 3px solid rgba(232,98,44,0.4);
+  border-bottom: 3px solid rgba(232,98,44,0.4);
+  right: var(--space-6);
+  bottom: var(--space-6);
+  pointer-events: none;
+  z-index: 0;
 }
 .section--decorated > .container { position: relative; z-index: 1; }
 
@@ -1189,7 +1203,7 @@ p { color: var(--color-muted); }
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: var(--radius-lg);
   min-height: 320px;
   padding: var(--space-6);
   display: flex;
@@ -1317,7 +1331,15 @@ p { color: var(--color-muted); }
   transform: translateY(10px);
   transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out), border-color 0.5s ease, box-shadow 0.5s ease;
 }
-.timeline__num { display: block; font-family: var(--font-heading); font-size: var(--fs-lg); font-weight: 700; color: var(--color-accent-light); }
+.timeline__num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-accent-light);
+}
 .timeline__card h3 { color: #fff; font-size: var(--fs-base); margin-block: 2px var(--space-2); }
 .timeline__card p { color: rgba(255,255,255,0.65); font-size: var(--fs-xs); }
 
