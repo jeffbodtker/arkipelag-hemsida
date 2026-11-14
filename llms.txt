@@ -41,7 +41,7 @@
 - Se: [Privatpersoner](https://akekyl.se/privat.html)
 
 ## Sidor
-- [Startsida](https://akekyl.se/index.html): Kylteknikföretag i Karlskrona — översikt över alla tjänsteområden
+- [Startsida](https://akekyl.se/): Kylteknikföretag i Karlskrona — översikt över alla tjänsteområden
 - [Kyla & kommersiellt](https://akekyl.se/kyla.html): Varukyla, restaurangkyla, industrikyla, kyl- och frysrum — huvudområdet
 - [Fastighetskyla & värmepumpar](https://akekyl.se/fastighetsagare.html): Komfortkyla, kylbatterier, värmepumpar och entreprenad för fastighetsägare
 - [Service & underhåll](https://akekyl.se/service.html): Serviceavtal, akut service, köldmediekontroller
