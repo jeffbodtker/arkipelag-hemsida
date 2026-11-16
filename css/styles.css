@@ -326,6 +326,29 @@ p { color: var(--color-muted); }
 }
 .stat-label { margin-top: var(--space-2); font-size: var(--fs-sm); }
 
+/* ---- Fact table & list (regulatory summaries) ------------------------------- */
+.table-wrap { overflow-x: auto; margin-top: var(--space-4); }
+.fact-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.fact-table th, .fact-table td { text-align: left; padding: var(--space-3); border-bottom: 1px solid var(--color-border); vertical-align: top; }
+.fact-table thead th { font-family: var(--font-heading); font-size: var(--fs-xs); letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-muted); }
+.fact-table tbody th { font-weight: 600; color: var(--color-primary-dark); }
+.fact-table tbody td { color: var(--color-foreground); }
+.fact-table tbody tr:last-child th, .fact-table tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 640px) {
+  .fact-table thead { display: none; }
+  .fact-table, .fact-table tbody, .fact-table tr, .fact-table th, .fact-table td { display: block; }
+  .fact-table tbody tr { padding-block: var(--space-3); border-bottom: 1px solid var(--color-border); }
+  .fact-table tbody tr:last-child { border-bottom: 0; padding-bottom: 0; }
+  .fact-table tbody th, .fact-table tbody td { padding: 2px 0; border-bottom: 0; }
+  .fact-table tbody th { font-size: var(--fs-base); margin-bottom: 2px; }
+  .fact-table tbody td::before { content: attr(data-label) ": "; color: var(--color-muted); }
+}
+.fact-list { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4); font-size: var(--fs-sm); color: var(--color-muted); }
+.fact-list__item { display: flex; align-items: flex-start; gap: var(--space-3); }
+.fact-list__item strong { color: var(--color-primary-dark); }
+.fact-source { margin-top: var(--space-5); font-size: var(--fs-xs); color: var(--color-muted); }
+.fact-source a { color: var(--color-accent-dark); font-weight: 600; text-decoration: underline; }
+
 /* ---- Header ---------------------------------------------------------------- */
 .site-header {
   position: sticky;
